@@ -8,6 +8,8 @@ http://charts.anchore.io/stable
 
 http://charts.anchore.io/test
 
+http://charts.anchore.io/legacy
+
 ## Contributing
 
 All commits must be signed with the DCO as defined in [CONTRIBUTING](CONTRIBUTING.rst)
