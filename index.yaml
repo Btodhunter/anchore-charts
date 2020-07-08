@@ -1,0 +1,64 @@
+apiVersion: v1
+entries:
+  anchore-admission-controller:
+  - apiVersion: v1
+    appVersion: 0.2.2
+    created: "2020-07-08T23:30:48.600288888Z"
+    description: A kubernetes admission controller for validating and mutating webhooks
+      that operates against Anchore Engine to make access decisions and annotations
+    digest: c2b152929a09bea7958dcbaca629a175f7fea9cd22f440d3f2e373ccc5b114fe
+    home: https://github.com/anchore/kubernetes-admission-controller
+    icon: https://anchore.com/wp-content/uploads/2016/08/anchore.png
+    maintainers:
+    - email: zach@anchore.com
+      name: zhill
+    - email: bradyt@anchore.com
+      name: btodhunter
+    name: anchore-admission-controller
+    urls:
+    - https://github.com/Btodhunter/anchore-charts/releases/download/anchore-admission-controller-0.2.9/anchore-admission-controller-0.2.9.tgz
+    version: 0.2.9
+  anchore-engine-legacy:
+  - apiVersion: v1
+    appVersion: 0.7.3
+    created: "2020-07-08T23:30:48.703139011Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: ""
+      version: 1.0.1
+    - alias: anchore-feeds-db
+      condition: anchore-feeds-db.enabled,anchoreEnterpriseGlobal.enabled
+      name: postgresql
+      repository: ""
+      version: 1.0.1
+    - alias: anchore-ui-redis
+      condition: anchore-ui-redis.enabled,anchoreEnterpriseGlobal.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: "10"
+    description: Anchore container analysis and policy evaluation engine service
+    digest: adae8b5ca052845c177e073ea6c961b417bbe1042283e8f7b1a776eec9e11a57
+    home: https://anchore.com
+    icon: https://anchore.com/wp-content/uploads/2016/08/anchore.png
+    keywords:
+    - analysis
+    - docker
+    - anchore
+    - anchore-engine
+    - image
+    - security
+    - vulnerability
+    - scanner
+    maintainers:
+    - email: zach@anchore.com
+      name: zhill
+    - email: bradyt@anchore.com
+      name: btodhunter
+    name: anchore-engine-legacy
+    sources:
+    - https://github.com/anchore/anchore-engine
+    urls:
+    - https://github.com/Btodhunter/anchore-charts/releases/download/anchore-engine-legacy-1.7.1/anchore-engine-legacy-1.7.1.tgz
+    version: 1.7.1
+generated: "2020-07-08T23:30:48.49690716Z"
